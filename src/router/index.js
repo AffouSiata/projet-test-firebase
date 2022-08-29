@@ -3,11 +3,15 @@ import Login from '../views/Login.vue'
 import inscription from '../views/inscription.vue'
 import home from '../views/home.vue'
 
+
+
+
 const routes = [
   {
     path: '/home',
     name: 'home',
-    component:home
+    component:home, 
+    meta: { requiresAuth: true }
   },
   {
     path: '/login',
@@ -25,5 +29,10 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+
+
+
+
+
 
 export default router
